@@ -1,5 +1,7 @@
 <% @documents.each do |document| %>
 	<h2><%= link_to document.title, document %></h2>
-	<p><%= time_ago_in_words(document.created_at) %></p>
+	<p><%= time_ago_in_words(document.created_at) %> ago</p>
 	<p><%= truncate(document.content, length:30) %></p>
 <% end %>
+
+<%= link_to "Create New Document", new_document_path %>
