@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :documents
+
   authenticated :user do
   	root "documents", as: "authenticated_root"
   end

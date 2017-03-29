@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Binder</title>
+    <title>FileCabinet</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,8 +9,10 @@
   </head>
 
   <body>
-  	<header><%= link_to "Binder", root_path %></header>
-
+  	<header>
+  		<div class="header_inner">
+  	<%= link_to "FileCabinet", root_path %>
+  		
   	<nav>
   		<% if user_signed_in? %>
   		<%= link_to "Create Document", new_document_path %>
@@ -19,7 +21,9 @@
   		<%= link_to "Log In", new_user_session_path %>
   		<% end %>
   	</nav>
+  	</div>
 
+  	</header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
